@@ -49,3 +49,24 @@ ord,"pass")==0)))
 {
  while(1)
 {
+printHead();
+ printf("\n\t\t\t\tMain Menu");
+ printf("\n\n\n");
+ printf("\n\n\t\t\t1. Add Employee");
+ printf("\n\n\t\t\t2. Delete Employee");
+ printf("\n\n\t\t\t3. Modify Employee");
+ printf("\n\n\t\t\t4. Display Employee List");
+ printf("\n\n\t\t\t5. Search Record");
+ printf("\n\n\t\t\t6. Display Basic Info");
+ printf("\n\n\t\t\t7. Display Basic Contact Info");
+ printf("\n\n\t\t\t8. List of Male Employee");
+ printf("\n\n\t\t\t9. List of Female Employee");
+ printf("\n\n\t\t\t10. List of Employee From Dhaka");
+ printf("\n\n\t\t\t11. List of Employee From Others
+District");
+ printf("\n\n\t\t\t12. List of Employee of Main Branch");
+ printf("\n\n\t\t\t13. List of Employee of Others
+Branch");
+ printf("\n\n\t\t\t0. EXIT");
+ printf("\n\n\t\tEnter Your Option :--> ");
+ scanf("%d",&option);
