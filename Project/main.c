@@ -22,20 +22,19 @@ printf("\n\t\t\t\t Loging in");
 printf("\n\t\t\t Enter Your Data");
 printf("\n\n\n\t\tUser ID: ");
 gets(name);
- //scanf("%s",&name);
 printf("\n\t\tPassword: ");
 int count;
 count=0;
 do
 {
 pass[count] = getch();
-if(pass[count] == 13 )
+if(pass[count] == 10 )
 {
 break;
 }
-else if(pass[count]==8 && i>0)
+else if(pass[count]==10 && i>0)
 {
-printf("%c%c%c",8,32,8);
+printf("%c%c%c",1,4,1);
 i--;
 }
 else
@@ -43,7 +42,7 @@ else
 printf("*");
 i++;
 }
-}while(pass[count]!=13);
+}while(pass[count]!=10);
 pass[count] = '\0';
 if(((strcasecmp(name,"admin"))==0)&&((strcasecmp(pass,"pass")==0)))
 {
@@ -84,6 +83,7 @@ switch(choice)
  break;
  case 6: displaybasic(fn);
  break;
+// My code
  case 7: basiccontact(fn);
  break;
  case 8: maleemp(fn);
