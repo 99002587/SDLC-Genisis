@@ -14,3 +14,11 @@ printf("\n\n\t\tEnter ID number: ");
  fflush(stdin);
  fgets(e.name,100,stdin); //fgets takes an extra \n
 character as input
+e.name[strlen(e.name)-1]='\0';
+ printf("\n\n\t\tEnter Designation: ");
+ fflush(stdin);
+ fgets(e.desgn,10,stdin); //fgets takes an extra \n
+character as input
+ e.desgn[strlen(e.desgn)-1]='\0';
+ printf("\n\n\t\tEnter Gender: ");
+ fflush(stdin);
