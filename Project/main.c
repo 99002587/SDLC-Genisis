@@ -2,37 +2,37 @@
 
 int main()
 {
-FILE * fp;
+FILE * fn;
 Employee e;
-int option;
-char another;
-if((fp=fopen("employeeInfo.txt","rb+"))==NULL)
+int choice;
+char next;
+if((fn=fopen("employeeInfo.txt","rb+"))==NULL)
 {
- if((fp=fopen("employeeInfo.txt","wb+"))==NULL)
+ if((fn=fopen("employeeInfo.txt","wb+"))==NULL)
  {
- printf("can't open file");
+ printf("unable to open file");
  return 0;
  }
 }
-char username[10],password[10];
+char name[10],pass[10];
 printHead();
 welcome();
 printHead();
-printf("\n\t\t\t\t Login Screen");
-printf("\n\t\t\t Enter Your Credential");
-printf("\n\n\n\t\tUsername: ");
-scanf("%s",username);
+printf("\n\t\t\t\t Loging in");
+printf("\n\t\t\t Enter Your Data");
+printf("\n\n\n\t\tUser ID: ");
+scanf("%s",name);
 printf("\n\t\tPassword: ");
-int i;
-i=0;
+int count;
+count=0;
 do
 {
-password[i] = getch();
-if(password[i] == 13 )
+pass[count] = getch();
+if(pass[count] == 13 )
 {
 break;
 }
-else if(password[i]==8 && i>0)
+else if(pass[count]==8 && i>0)
 {
 printf("%c%c%c",8,32,8);
 i--;
@@ -42,12 +42,11 @@ else
 printf("*");
 i++;
 }
-}while(password[i]!=13);
-password[i] = '\0';
-if(((strcasecmp(username,"admin"))==0)&&((strcasecmp(passw
-ord,"pass")==0)))
+}while(pass[count]!=13);
+pass[count] = '\0';
+if(((strcasecmp(name,"admin"))==0)&&((strcasecmp(pass,"pass")==0)))
 {
- while(1)
+ while(TRUE)
 {
 printHead();
  printf("\n\t\t\t\tMain Menu");
@@ -62,53 +61,51 @@ printHead();
  printf("\n\n\t\t\t8. List of Male Employee");
  printf("\n\n\t\t\t9. List of Female Employee");
  printf("\n\n\t\t\t10. List of Employee From Dhaka");
- printf("\n\n\t\t\t11. List of Employee From Others
-District");
+ printf("\n\n\t\t\t11. List of Employee From Others District");
  printf("\n\n\t\t\t12. List of Employee of Main Branch");
- printf("\n\n\t\t\t13. List of Employee of Others
-Branch");
+ printf("\n\n\t\t\t13. List of Employee of Others Branch");
  printf("\n\n\t\t\t0. EXIT");
- printf("\n\n\t\tEnter Your Option :--> ");
- scanf("%d",&option);
-switch(option)
+ printf("\n\n\t\tEnter Your choice :--> ");
+ scanf("%d",&choice);
+switch(choice)
  {
  case 0: return 1;
  break;
- case 1: add(fp);
+ case 1: add(fn);
  break;
- case 2: fp=del(fp);
+ case 2: fp=del(fn);
  break;
- case 3: modify(fp);
+ case 3: modify(fn);
  break;
- case 4: displayList(fp);
+ case 4: displayList(fn);
  break;
- case 5: searchRecord(fp);
+ case 5: searchRecord(fn);
  break;
- case 6: displaybasic(fp);
+ case 6: displaybasic(fn);
  break;
- case 7: basiccontact(fp);
+ case 7: basiccontact(fn);
  break;
- case 8: maleemp(fp);
+ case 8: maleemp(fn);
  break;
- case 9: femaleemp(fp);
+ case 9: femaleemp(fn);
  break;
- case 10: frmdhaka(fp);
+ case 10: frmdhaka(fn);
  break;
- case 11: frmors(fp);
+ case 11: frmors(fn);
  break;
- case 12: mainbr(fp);
+ case 12: mainbr(fn);
  break;
- case 13: otherbr(fp);
+ case 13: otherbr(fn);
  break;
- default: printf("\n\t\tYou Pressed wrong key");
- printf("\n\t\tProgram terminated");
+ default: printf("\n\t\twrong key pressed");
+ printf("\n\t\tProgram END");
  getch();
  exit(0);
  }
 }
 }
 else {
- printf("\n\t\tLogin Failed");
+ printf("\n\t\tAcess Failed");
 }
 return 1;
 }
