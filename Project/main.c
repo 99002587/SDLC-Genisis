@@ -3,7 +3,7 @@
 int main()
 {
 FILE * fn;
-Employee e;
+Employee emp;
 int choice;
 char next;
 if((fn=fopen("employeeInfo.txt","rb+"))==NULL)
