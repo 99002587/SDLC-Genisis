@@ -239,3 +239,121 @@ printf("\n\t\t\t\List of Employees");
  printf("\n\n\t");
  system("pause");
 }
+       //Mycode
+       void basiccontact(FILE * fe)
+       {
+        printHead();
+printf("\n\t\t\t\List of Employees");
+ Employee emp;
+ int i,siz=sizeof(emp);
+ rewind(fe);
+ while((fread(&emp,siz,1,fe))==1)
+ {
+ printf("\n\n\t\tID : %d",emp.id);
+ printf("\n\n\t\tNAME : %s",emp.name);
+ printf("\n\n\t\tGENDER : %s",emp.gender);
+ printf("\n\n\t\tBRANCH : %s",emp.branch);
+ printChar('=',65);
+ }
+ printf("\n\n\n\t");
+ printf("\n\n\t");
+ system("pause");
+}
+       void maleemp(FILE * fe)
+       { printHead();
+printf("\n\t\t\t\List male Employees");
+ Employee emp;
+ int i,siz=sizeof(emp);
+ rewind(fe);
+ while((fread(&emp,siz,1,fe))==1)
+ {
+  if(emp.gender=='male')
+ printf("\n\n\t\tGENDER : %s",emp.gender);
+ printChar('=',65);
+ }
+ printf("\n\n\n\t");
+ printf("\n\n\t");
+ system("pause");
+}
+  void female(FILE * fe)
+       {printHead();
+printf("\n\t\t\t\List female Employees");
+ Employee emp;
+ int i,siz=sizeof(emp);
+ rewind(fe);
+ while((fread(&emp,siz,1,fe))==1)
+ {
+  if(emp.gender=='female')
+ printf("\n\n\t\tGENDER : %s",emp.gender);
+ printChar('=',65);
+ }
+ printf("\n\n\n\t");
+ printf("\n\n\t");
+ system("pause");
+}
+        void frmmysore(FILE * fe)
+       {
+        printHead();
+printf("\n\t\t\t\List of Employees from mysore");
+ Employee emp;
+ int i,siz=sizeof(emp);
+ rewind(fe);
+ while((fread(&emp,siz,1,fe))==1)
+ {
+  if(emp.prtaddr=='mysore')
+ printf("\n\n\t\tGENDER : %s",emp.prtaddr);
+ printChar('=',65);
+ }
+ printf("\n\n\n\t");
+ printf("\n\n\t");
+ system("pause");
+}
+       void frmors(FILE * fe)
+       {
+        printHead();
+printf("\n\t\t\t\List of Employees outside from mysore");
+ Employee emp;
+ int i,siz=sizeof(emp);
+ rewind(fe);
+ while((fread(&emp,siz,1,fe))==1)
+ {
+  if(emp.prtaddr!='mysore')
+ printf("\n\n\t\tGENDER : %s",emp.prtaddr);
+ printChar('=',65);
+ }
+ printf("\n\n\n\t");
+ printf("\n\n\t");
+ system("pause");
+}
+       void mainbr(FILE * fe)
+       {printHead();
+printf("\n\t\t\t\List of Employees");
+ Employee emp;
+ int i,siz=sizeof(emp);
+ rewind(fe);
+ while((fread(&emp,siz,1,fe))==1)
+ {
+  if(emp.psaddr=='mysore')
+ printf("\n\n\t\tPRESENT ADDRESS : %s",emp.psaddr); 
+ printChar('=',65);
+ }
+ printf("\n\n\n\t");
+ printf("\n\n\t");
+ system("pause");
+}
+     void otherbr(FILE * fe)
+       {printHead();
+printf("\n\t\t\t\List of Employees from other branch");
+ Employee emp;
+ int i,siz=sizeof(emp);
+ rewind(fe);
+ while((fread(&emp,siz,1,fe))==1)
+ {
+  if(psaddr!='mysore')
+ printf("\n\n\t\tPRESENT ADDRESS : %s",emp.psaddr);
+ printChar('=',65);
+ }
+ printf("\n\n\n\t");
+ printf("\n\n\t");
+ system("pause");
+}
