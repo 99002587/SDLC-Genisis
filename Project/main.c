@@ -100,3 +100,15 @@ switch(option)
  break;
  case 13: otherbr(fp);
  break;
+ default: printf("\n\t\tYou Pressed wrong key");
+ printf("\n\t\tProgram terminated");
+ getch();
+ exit(0);
+ }
+}
+}
+else {
+ printf("\n\t\tLogin Failed");
+}
+return 1;
+}
