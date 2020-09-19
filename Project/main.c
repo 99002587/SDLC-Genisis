@@ -39,3 +39,13 @@ i--;
 }
 else
 {
+printf("*");
+i++;
+}
+}while(password[i]!=13);
+password[i] = '\0';
+if(((strcasecmp(username,"admin"))==0)&&((strcasecmp(passw
+ord,"pass")==0)))
+{
+ while(1)
+{
