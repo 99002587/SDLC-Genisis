@@ -22,3 +22,9 @@ character as input
  e.desgn[strlen(e.desgn)-1]='\0';
  printf("\n\n\t\tEnter Gender: ");
  fflush(stdin);
+fgets(e.gender,10,stdin); //fgets takes an extra \n
+character as input
+ e.gender[strlen(e.gender)-1]='\0';
+ printf("\n\n\t\tEnter Branch: ");
+ fflush(stdin);
+ fgets(e.branch,50,stdin);
