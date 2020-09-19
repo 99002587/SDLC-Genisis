@@ -90,7 +90,7 @@ switch(choice)
  break;
  case 9: femaleemp(fn);
  break;
- case 10: frmdhaka(fn);
+ case 10: frmmysore(fn);
  break;
  case 11: frmors(fn);
  break;
