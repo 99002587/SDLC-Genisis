@@ -73,7 +73,7 @@ switch(choice)
  break;
  case 1: add(fn);
  break;
- case 2: fp=del(fn);
+ case 2: fn=del(fn);
  break;
  case 3: modify(fn);
  break;
