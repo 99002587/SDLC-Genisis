@@ -48,3 +48,9 @@ e.phone[strlen(e.phone)-1]='\0';
  fgets(e.mail,20,stdin);
  e.mail[strlen(e.mail)-1]='\0';
  fwrite(&e,sizeof(e),1,fp);
+ printf("\n\n\t\tWant to enter another employee info
+(Y/N)\t");
+ fflush(stdin);
+ another=getchar();
+}
+}
