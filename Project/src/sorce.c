@@ -28,3 +28,10 @@ character as input
  printf("\n\n\t\tEnter Branch: ");
  fflush(stdin);
  fgets(e.branch,50,stdin);
+e.branch[strlen(e.branch)-1]='\0';
+ printf("\n\n\t\tEnter Salary: ");
+ scanf("%f",&e.sal);
+ printf("\n\n\t\tEnter Present Address: ");
+ fflush(stdin);
+ fgets(e.psaddr,200,stdin);
+ e.psaddr[strlen(e.psaddr)-1]='\0';
