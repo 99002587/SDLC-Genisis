@@ -21,7 +21,7 @@ printHead();
 printf("\n\t\t\t\t Loging in");
 printf("\n\t\t\t Enter Your Data");
 printf("\n\n\n\t\tUser ID: ");
-scanf("%s",name);
+scanf("%s",&name);
 printf("\n\t\tPassword: ");
 int count;
 count=0;
